@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zombie Survival — 100 Waves</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="hud">
+    <div class="panel">WAVE <span id="wave">1</span>/100</div>
+    <div class="panel">HP <span id="hp">100</span></div>
+    <div class="panel">WEAPON <span id="weapon">PISTOL</span></div>
+    <div class="panel">ZOMBIES <span id="count">0</span></div>
+  </div>
+
+  <div id="crosshair"></div>
+  <div id="message"></div>
+
+  <div id="controls">
+    WASD / ARROWS — Move &nbsp; | &nbsp;
+    MOUSE — Aim &nbsp; | &nbsp;
+    CLICK — Shoot &nbsp; | &nbsp;
+    1 — Pistol &nbsp; | &nbsp;
+    2 — Shotgun &nbsp; | &nbsp;
+    ENTER — Enter House
+  </div>
+
+  <canvas id="game"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
