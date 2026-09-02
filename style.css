@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #111;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  cursor: none;
+}
+
+#hud {
+  position: fixed;
+  z-index: 10;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.panel {
+  background: rgba(12, 15, 13, 0.88);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 7px;
+  padding: 8px 12px;
+  font-weight: bold;
+  box-shadow: 0 3px 12px rgba(0,0,0,.45);
+}
+
+#message {
+  position: fixed;
+  z-index: 20;
+  left: 50%;
+  top: 48%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: clamp(26px, 5vw, 64px);
+  font-weight: 900;
+  text-shadow: 0 5px 20px black;
+  white-space: pre-line;
+  pointer-events: none;
+}
+
+#controls {
+  position: fixed;
+  z-index: 10;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 13px;
+  border-radius: 7px;
+  background: rgba(0,0,0,.72);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+#crosshair {
+  position: fixed;
+  z-index: 30;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+#crosshair::before,
+#crosshair::after {
+  content: "";
+  position: absolute;
+  background: white;
+  box-shadow: 0 0 3px black;
+}
+
+#crosshair::before {
+  width: 18px;
+  height: 2px;
+  top: 8px;
+  left: 0;
+}
+
+#crosshair::after {
+  width: 2px;
+  height: 18px;
+  left: 8px;
+  top: 0;
+}
